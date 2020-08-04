@@ -9,3 +9,7 @@ class Team(models.Model):
 class Player(models.Model):
     player_name = CharField(default="", blank=False, max_length=255)
     team = ForeignKey(Team, on_delete=models.CASCADE)
+
+
+class Settings(models.Model):
+    api_key = CharField(default="", blank=True, max_length=255)
